@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        :root {
+            --content-block-size: 500px;
+            --card-width: 150px;
+        }
+
+        body {
+            background-color: #0d5825;
+            padding: none;
+        }
+
+        .main-content {
+            width: var(--content-block-size);
+            height: var(--content-block-size);
+
+            /* Center content */
+            margin: calc(50vh - var(--content-block-size)/2) auto;
+
+            /* Set text */
+            text-align: center;
+            color: white;
+        }
+
+        .card-container {
+            position: relative;
+            margin-top: 75px;
+        }
+
+        .card {
+            position: absolute;
+            width: var(--card-width);
+        }
+
+        .card:nth-child(1) {
+            left: 100px;
+            transform: rotate(-10deg);
+        }
+
+        .card:nth-child(2) {
+            left: 175px;
+            top: -10px
+        }
+
+        .card:nth-child(3) {
+            left: 250px;
+            transform: rotate(10deg);
+        }
+
+        .card:nth-child(1):hover{
+            transform: rotate(-10deg) translateY(-15px);
+        }
+
+        .card:nth-child(2):hover{
+            transform: translateY(-15px);
+        }
+
+        .card:nth-child(3):hover {
+            transform: rotate(10deg) translateY(-15px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+        <h2><q>Доля тасує карти, а ми ними граємо.</q><br>Артур Шопенгауер</h2>
+        <div class="card-container">
+            <img class="card" src="https://raw.githubusercontent.com/0lgamaslova/Alevel-Markup/master/images/card01.png"
+                alt="Card">
+            <img class="card" src="https://raw.githubusercontent.com/0lgamaslova/Alevel-Markup/master/images/card01.png"
+                alt="Card">
+            <img class="card" src="https://raw.githubusercontent.com/0lgamaslova/Alevel-Markup/master/images/card01.png"
+                alt="Card">
+        </div>
+    </div>
+</body>
+
+</html>

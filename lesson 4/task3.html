@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        body {
+            padding: none;
+            margin: none;
+        }
+
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: -190px;
+            height: 100vh;
+            width: 240px;
+            background-color: gray;
+            text-transform: uppercase;
+            transition: transform .3s linear;
+
+        }
+
+        .menu-container:hover {
+            transform: translateX(190px);
+        }
+
+        .menu-container div {
+            display: inline-block;
+        }
+
+        .menu-holder {
+            position: relative;
+            font-size: 26px;
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            color: white;
+            margin: 10px;
+            top: 40%;
+        }
+
+        li {
+            margin: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="menu">
+            <ul>
+                <li>home</li>
+                <li>contacts</li>
+                <li>out team</li>
+                <li>faq</li>
+                <li>about</li>
+                <li>news</li>
+            </ul>
+        </div>
+        <div class="menu-holder">
+            menu is here
+        </div>
+    </div>
+</body>
+
+</html>

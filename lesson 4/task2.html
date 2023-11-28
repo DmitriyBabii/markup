@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        :root {
+            --block-size: 150px;
+            --block-container-padding: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .block-container {
+            width: calc(var(--block-size) * 3);
+            height: calc(var(--block-size) * 3);
+            background-color: aquamarine;
+            padding: var(--block-container-padding);
+        }
+
+        .block {
+            position: absolute;
+            width: var(--block-size);
+            height: var(--block-size);
+            background-color: bisque;
+        }
+
+        .block:hover{
+            z-index: 100;
+        }
+
+        .block:nth-child(1) {
+            background-color: #faa;
+        }
+
+        .block:nth-child(2) {
+            background-color: #afa;
+            left: calc(100px + var(--block-container-padding));
+            top: calc(100px + var(--block-container-padding));
+            z-index: 99;
+        }
+
+        .block:nth-child(3) {
+            background-color: #aaf;
+            left: calc(200px + var(--block-container-padding));
+            top: calc(200px + var(--block-container-padding));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block-container">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</body>
+
+</html>

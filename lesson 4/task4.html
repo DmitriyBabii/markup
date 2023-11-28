@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+    <style>
+        :root {
+            --block-size: 100px;
+            --step-size: 200px;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(var(--step-size));
+                background-color: blue;
+            }
+
+            25% {
+                transform: translate(var(--step-size), var(--step-size));
+                background-color: green;
+            }
+
+            50% {
+                transform: translate(var(--step-size), 0);
+                background-color: yellow;
+            }
+
+            75% {
+                transform: translate(0, 0);
+                background-color: red;
+            }
+
+            100% {
+                transform: translateY(var(--step-size));
+                background-color: blue;
+            }
+        }
+
+        .block {
+            height: var(--block-size);
+            width: var(--block-size);
+            background-color: aqua;
+            animation: move 5s infinite both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block"></div>
+</body>
+
+</html>
