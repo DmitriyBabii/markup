@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* HEADER SETUP */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    padding: 20px;
+
+    background-color: yellow;
+}
+
+/* MAIN SETUP */
+main {
+    display: flex;
+}
+
+.side-content {
+    flex-grow: 1;
+}
+
+.left-content {
+    background-color: plum;
+}
+
+.right-content {
+    background-color: aquamarine;
+}
+
+/* MAIN CONTENT */
+.center-content {
+    padding: 20px;
+    width: 1200px;
+
+    flex-basis: 800px;
+    flex-grow: 4;
+}
+
+.greeting {
+    text-align: justify;
+}
+
+.center-content .header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.plate-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.plate {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+
+    height: 350px;
+    min-width: 400px;
+    flex-basis: 400px;
+    flex-grow: 1;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plate div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plate img {
+    height: 100px;
+    width: 100px;
+
+    border: 10px solid palevioletred;
+    border-radius: 50%;
+}
+
+.plate-description {
+    text-align: justify;
+}
+
+.go-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 26px;
+    width: 50px;
+    border-radius: 13px;
+
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+}
+
+/* FOOTER SETUP */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: chartreuse;
+
+    height: 100px;
+}
