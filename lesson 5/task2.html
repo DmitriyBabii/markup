@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        :root {
+            --border-radius: 20px;
+            --border-weight: 3px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            height: 100px;
+            width: 300px;
+
+            border: var(--border-weight) solid black;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            overflow: hidden;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-basis: 100px;
+            flex-grow: 1;
+        }
+
+        .item:nth-child(1) {
+            order: 4;
+            background-color: orangered;
+        }
+
+        .item:nth-child(2) {
+            order: 2;
+            background-color: lightseagreen;
+        }
+
+        .item:nth-child(3) {
+            order: 1;
+            background-color: purple;
+        }
+
+        .item:nth-child(4) {
+            order: 3;
+            background-color: greenyellow;
+        }
+
+        .item:nth-child(5) {
+            order: 5;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>
