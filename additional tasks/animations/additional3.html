@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional 3</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(var(--ellipse));
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            75% {
+                transform: translateY(calc(var(--ellipse)*-1));
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(90deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(270deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        :root {
+            --top-content: 365px;
+            --solar-center: 700px;
+
+            --mercury-size: 15px;
+            --mercury-radius: 90px;
+            --mercury-img-size: 23px;
+
+            --venus-size: 20px;
+            --venus-radius: 130px;
+            --venus-img-size: 30px;
+
+            --earth-size: 45px;
+            --earth-radius: 230px;
+            --earth-img-size: 170px;
+
+            --mars-size: 30px;
+            --mars-radius: 300px;
+            --mars-img-size: 48px;
+
+            --jupiter-size: 50px;
+            --jupiter-radius: 400px;
+            --jupiter-img-size: 55px;
+
+            --saturn-size: 45px;
+            --saturn-radius: 480px;
+            --saturn-img-size: 110px;
+
+            --uranus-size: 30px;
+            --uranus-radius: 550px;
+            --uranus-img-size: 55px;
+
+            --neptune-size: 20px;
+            --neptune-radius: 595px;
+            --neptune-img-size: 24px;
+        }
+
+        body {
+            background-image: url(./Materials/sky.jpg);
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .solar {
+            position: relative;
+            width: calc(var(--solar-center)*2);
+            height: 100vh;
+
+            margin: auto;
+            background-color: aqua;
+        }
+
+        .sun {
+            position: absolute;
+            top: calc(var(--top-content) - 75px);
+            right: calc(50% - 50px);
+
+            width: 130px;
+            height: 130px;
+
+            border-radius: 50%;
+
+            background-image: url(./Materials/sun.png);
+            background-position: center;
+            background-size: 130px;
+
+            z-index: 2;
+        }
+
+        .planet {
+            position: absolute;
+            top: var(--top-content);
+
+            border-radius: 50%;
+            background-position: center;
+            animation: rotate 5s linear infinite;
+        }
+
+        .mercury {
+            --ellipse: calc(var(--mercury-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .mercury .planet {
+            height: var(--mercury-size);
+            width: var(--mercury-size);
+
+            right: calc(var(--mercury-radius) + 50%);
+
+            background-image: url(./Materials/mercury.jpg);
+            background-size: var(--mercury-img-size);
+
+            transform-origin: var(--mercury-radius) center;
+        }
+
+        .venus {
+            --ellipse: calc(var(--venus-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .venus .planet {
+            height: var(--venus-size);
+            width: var(--venus-size);
+
+            right: calc(var(--venus-radius) + 50%);
+
+            background-image: url(./Materials/venus.jpg);
+            background-size: var(--venus-img-size);
+
+            transform-origin: var(--venus-radius) center;
+        }
+
+        .earth {
+            --ellipse: calc(var(--earth-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .earth .planet {
+            height: var(--earth-size);
+            width: var(--earth-size);
+
+            right: calc(var(--earth-radius) + 50%);
+
+            background-image: url(./Materials/earth.gif);
+            background-size: var(--earth-img-size);
+
+            transform-origin: var(--earth-radius) center;
+        }
+
+        .mars {
+            --ellipse: calc(var(--mars-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .mars .planet {
+            height: var(--mars-size);
+            width: var(--mars-size);
+
+            right: calc(var(--mars-radius) + 50%);
+
+            background-image: url(./Materials/mars.png);
+            background-size: var(--mars-img-size);
+
+            transform-origin: var(--mars-radius) center;
+        }
+
+        .jupiter {
+            --ellipse: calc(var(--jupiter-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .jupiter .planet {
+            height: var(--jupiter-size);
+            width: var(--jupiter-size);
+
+            right: calc(var(--jupiter-radius) + 50%);
+
+            background-image: url(./Materials/jupiter.jpg);
+            background-size: var(--jupiter-img-size);
+
+            transform-origin: var(--jupiter-radius) center;
+        }
+
+        .saturn {
+            --ellipse: calc(var(--saturn-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .saturn .planet {
+            height: var(--saturn-size);
+            width: var(--saturn-size);
+
+            right: calc(var(--saturn-radius) + 50%);
+
+            background-image: url(./Materials/saturn.png);
+            background-size: var(--saturn-img-size);
+
+            transform-origin: var(--saturn-radius) center;
+        }
+
+        .uranus {
+            --ellipse: calc(var(--uranus-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .uranus .planet {
+            height: var(--uranus-size);
+            width: var(--uranus-size);
+
+            right: calc(var(--uranus-radius) + 50%);
+
+            background-image: url(./Materials/uranus.png);
+            background-size: var(--uranus-img-size);
+
+            transform-origin: var(--uranus-radius) center;
+        }
+
+        .neptune {
+            --ellipse: calc(var(--neptune-radius)/2.7);
+            animation: move 5s ease-in-out infinite;
+        }
+
+        .neptune .planet {
+            height: var(--neptune-size);
+            width: var(--neptune-size);
+
+            right: calc(var(--neptune-radius) + 50%);
+
+            background-image: url(./Materials/neptune.jpg);
+            background-size: var(--neptune-img-size);
+
+            transform-origin: var(--neptune-radius) center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="solar">
+        <div class="sun"> </div>
+        <div class="mercury">
+            <div class="planet"></div>
+        </div>
+        <div class="venus">
+            <div class="planet"></div>
+        </div>
+        <div class="earth">
+            <div class="planet"></div>
+        </div>
+        <div class="mars">
+            <div class="planet"></div>
+        </div>
+        <div class="jupiter">
+            <div class="planet"></div>
+        </div>
+        <div class="saturn">
+            <div class="planet"></div>
+        </div>
+        <div class="uranus">
+            <div class="planet"></div>
+        </div>
+        <div class="neptune">
+            <div class="planet"></div>
+        </div>
+    </div>
+</body>
+
+</html>

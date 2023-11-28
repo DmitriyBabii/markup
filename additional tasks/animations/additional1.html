@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        label {
+            display: inline-block;
+        }
+
+        .catch {
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            color: aliceblue;
+            background-color: rebeccapurple;
+        }
+
+        input:checked+label {
+            transform: translateX(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="some" hidden>
+    <label for="some">
+        <div class="catch">Catch me!!!</div>
+    </label>
+</body>
+
+</html>
