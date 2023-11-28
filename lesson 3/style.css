@@ -1,0 +1,52 @@
+/*Task 1.2*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*Task 2*/
+.custom-element {
+    width: 350px;
+    height: 220px;
+
+    padding: 15px 10px 20px;
+
+    margin-bottom: 30px;
+    border: 2px dashed red;
+
+    background-color: green;
+}
+
+.clearfix {
+    background-color: blanchedalmond;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-container img {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.text-container p {
+    text-align: justify;
+}
+
+.left-img, .right-img{
+    margin: 15px;
+}
+
+.left-img {
+    float: left;
+    margin-left: 0;
+}
+
+.right-img {
+    float: right;
+    margin-right: 0;
+}
