@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        label {
+            display: flex;
+            align-items: center;
+        }
+
+        label.checkbox::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border-radius: 5px;
+
+            background-size: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        input+label.checkbox::before {
+            background-image: url(./materials/no.png), 
+            linear-gradient(
+                180deg,
+                rgb(248, 140, 140),
+                red
+            );
+        }
+
+        input:checked+label.checkbox::before {
+            background-image: url(./materials/yes.png), linear-gradient(180deg,
+                    lightgreen,
+                    green);
+        }
+    </style>
+</head>
+
+<body>
+    <input id="check" type="checkbox" hidden>
+    <label for="check" class="checkbox">Check it</label>
+
+    <input id="check2" type="checkbox" checked hidden>
+    <label for="check2" class="checkbox">Check it to</label>
+</body>
+
+</html>
