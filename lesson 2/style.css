@@ -1,0 +1,44 @@
+/*Task 2.1*/
+a[href^="https"] {
+    color: #f00;
+}
+
+/*Task 2.2*/
+ul+p {
+    font-size: 26px;
+}
+
+/*Task 2.3*/
+ul ul a[title="youtube"] {
+    color: #ff8d00;
+}
+
+/*Task 2.4*/
+a[title] {
+    border: 1px solid #067b09;
+}
+
+/*Task 3*/
+.text-box h3:first-child{
+    color: pink;
+}
+
+#greycol {
+    color: gray;
+}
+
+.text-box div p {
+    color: red;
+}
+
+h3[title="text"]{
+    color: blue;
+}
+
+h3[title="text"] + p{
+    color: green;
+}
+
+.yellow{
+    color: yellow;
+}
