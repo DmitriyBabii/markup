@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        label{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            
+            color: aliceblue;
+            background-color: rebeccapurple;
+        }
+
+        .push {
+            margin: 40vh 0 0 40vw;
+        }
+
+        .runner {
+            visibility: hidden;
+            display: inline-block;
+            animation: randomPos 1000ms /*steps(51, end)*/ infinite;
+        }
+
+        input:checked~.runner {
+            animation-play-state: paused;
+            visibility: visible;
+        }
+
+        input:checked~.push {
+            visibility: hidden;
+        }
+
+        @keyframes randomPos {
+            0% {
+                transform: translate(-126px, -189px);
+            }
+
+            14% {
+                transform: translate(-43px, 97px);
+            }
+
+            28% {
+                transform: translate(-167px, -154px);
+            }
+
+            42% {
+                transform: translate(64px, -112px);
+            }
+
+            56% {
+                transform: translate(-72px, -173px);
+            }
+
+            70% {
+                transform: translate(-135px, -192px);
+            }
+
+            84% {
+                transform: translate(154px, 87px);
+            }
+
+            100% {
+                transform: translate(-98px, 163px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="some" hidden>
+    <label for="some" class="push"> Push me!!! </label>
+    <label for="some" class="runner">I am here</label>
+</body>
+
+</html>
