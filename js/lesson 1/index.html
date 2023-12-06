@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            width: 250px;
+        }
+
+        .form-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 50px;
+        }
+
+        .no-status {
+            display: none;
+        }
+
+        .warning {
+            background-color: red;
+        }
+
+        .access {
+            background-color: aquamarine;
+        }
+
+        canvas{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <input id="user_field" type="text" name="username" placeholder="Username">
+        <input id="password_field" type="password" name="password" placeholder="password">
+        <div id="form_status" class="form-status no-status"></div>
+        <button>Відправити</button>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+
+</html>
