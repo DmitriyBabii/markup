@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./style.css"> ADD NORMALIZE -->
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
     <title>Module</title>
 </head>
@@ -12,6 +12,10 @@
 <body>
     <header>
         <a href="#"><img src="./materials/logo.png" alt="logo"></a>
+        <input type="checkbox" id="burger_menu" hidden>
+        <label class="burger-menu-label" for="burger_menu" hidden>
+            <span class="burger-menu"></span>
+        </label>
         <div class="menu">
             <a href="#">About us</a>
             <a href="#">Reservation</a>
